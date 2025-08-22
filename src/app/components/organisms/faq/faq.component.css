@@ -1,0 +1,79 @@
+.card {
+  max-width: 330px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 0rem 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.start-icon {
+  height: 2rem;
+  margin-right: 1.5rem;
+}
+
+.card-header > h1{
+  color: var(--color-dark-purple);
+}
+
+.faq-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.is-show-answer {
+  display: none;
+}
+
+.is-show-answer:not(:checked) ~ .qa-answer {
+  height: 0;
+}
+
+.icons {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.icons > .icon-minus,
+.icons > .icon-plus {
+  position: absolute;
+  transition: opacity 500ms;
+}
+
+.is-show-answer:not(:checked)
+  ~ .qa-question
+  > .question-icon
+  > .icons
+  > .icon-minus {
+  opacity: 0;
+}
+
+.is-show-answer:checked ~ .qa-question > .question-icon > .icons > .icon-plus {
+  opacity: 0;
+}
+
+.qa-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-dark-purple);
+  font-weight: bold;
+}
+
+.qa-answer {
+  color: var(--color-grayish-purple);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 550px;
+  }
+}

@@ -1,0 +1,48 @@
+<div class="component-card-faq">
+    <div class="card">
+        <div class="card-header">
+            <div class="start-icon">
+                <app-image imgAlt="Start icon" imgStr="/static/images/icon-star.svg"></app-image>
+            </div>
+            <h1>FAQs</h1>
+        </div>
+
+        <div class="card-body">
+            <div *ngFor="let item of qaList" class="faq-item">
+                <div class="qa-content">
+                    <input
+                        type="checkbox"
+                        name="item_list"
+                        [id]="`qa-item-${item.id}`"
+                        class="is-show-answer"
+                        [value]="item.isShow"
+                    >
+
+                    <label class="qa-question" [for]="`qa-item-${item.id}`">
+                        <div class="question-item">
+                            {{item.question}}
+                        </div>
+                        <div class="question-icon">
+                            <div class="icons">
+                                <app-image
+                                    imgAlt="dragable icon"
+                                    imgStr="/static/images/icon-minus.svg"
+                                    class="icon-minus"
+                                ></app-image>
+                                <app-image
+                                    imgAlt="dragable icon"
+                                    imgStr="/static/images/icon-plus.svg"
+                                    class="icon-plus"
+                                ></app-image>
+                            </div>
+                        </div>
+                    </label>
+
+                    <div class="qa-answer">
+                        {{item.answer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

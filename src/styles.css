@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* 
+        SCREEN
+    */
+    --screen-mobile: 375px;
+    --screen-desktop: 1440px;
+    /* 
+        COLORS
+    */
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-pink: hsl(275, 100%, 97%);
+    --color-grayish-purple: hsl(292, 16%, 49%);
+    --color-dark-purple: hsl(292, 42%, 14%);
+    /* 
+        TYPOGRAPHY
+    */
+    --font-size: 16px;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("/static/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: 'Work Sans Italic';
+    src: url('/static/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+}

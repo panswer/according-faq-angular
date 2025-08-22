@@ -1,0 +1,42 @@
+.container-root {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Work Sans";
+  background-color: var(--color-light-pink);
+  position: absolute;
+}
+
+.container-bg-img {
+  width: 100%;
+  height: 14rem;
+  background-image: url("/static/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: static;
+}
+
+.container-main {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-aux {
+  position: absolute;
+  height: 0;
+  top: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width:768px){
+  .container-bg-img{
+    background-image: url("/static/images/background-pattern-desktop.svg");
+  }
+}
