@@ -89,6 +89,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "faq-accordion-angular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "faq-accordion-angular:serve:production"
+            }
+          }
         }
       }
     }
